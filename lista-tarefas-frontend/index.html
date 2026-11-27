@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Lista de Tarefas</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen transition-colors duration-300">
+
+    <main class="max-w-3xl mx-auto px-5 py-10">
+
+        <!-- Cabeçalho -->
+        <header class="text-center mb-10">
+
+            <div class="inline-block bg-blue-100 text-blue-600 rounded-2xl p-4 mb-4 text-3xl">
+                ✓
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-3">
+                Minha To-Do List
+            </h1>
+
+            <p class="text-slate-500">
+                Organize suas tarefas e mantenha o foco!
+            </p>
+
+            <button
+                type="button"
+                id="botao-tema"
+                class="mt-6 bg-slate-800 hover:bg-slate-700 text-white px-5 py-3 rounded-xl font-semibold transition duration-200">
+                🌙 Modo escuro
+            </button>
+
+        </header>
+
+        <!-- Formulário -->
+        <section class="formulario p-6 md:p-8 rounded-2xl shadow-lg mb-8">
+
+            <h2 class="text-xl font-bold mb-6">
+                Adicionar nova tarefa
+            </h2>
+
+            <form id="form-tarefa" class="flex flex-col gap-4">
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Digite o título da tarefa..."
+                    required
+                    class="w-full p-4 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+
+                <textarea
+                    id="descricao"
+                    placeholder="Descrição da tarefa (opcional)"
+                    class="w-full p-4 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition resize-y min-h-24"></textarea>
+
+                <button
+                    type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition duration-200 shadow-md">
+                    Adicionar tarefa
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Lista de tarefas -->
+        <section class="lista p-6 md:p-8 rounded-2xl shadow-lg">
+
+            <div class="flex items-center justify-between mb-6">
+
+                <h2 class="text-xl font-bold">
+                    Minhas tarefas
+                </h2>
+
+                <span class="text-sm text-slate-400">
+                    Sua organização diária
+                </span>
+
+            </div>
+
+            <div id="lista-tarefas" class="space-y-4">
+
+                <!-- As tarefas aparecerão aqui pelo JavaScript -->
+
+            </div>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="text-center mt-8 text-sm text-slate-400">
+            Desenvolvido com HTML, CSS, JavaScript e Tailwind CSS
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
