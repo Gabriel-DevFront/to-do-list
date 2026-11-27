@@ -1,0 +1,212 @@
+
+/* =================================
+   VARIÁVEIS DO TEMA CLARO
+================================= */
+
+:root {
+    --fundo: #f1f5f9;
+    --cartao: #ffffff;
+    --texto: #1e293b;
+    --texto-secundario: #64748b;
+    --borda: #cbd5e1;
+    --campo: #ffffff;
+}
+
+/* =================================
+   VARIÁVEIS DO TEMA ESCURO
+================================= */
+
+body.modo-escuro {
+    --fundo: #0f172a;
+    --cartao: #1e293b;
+    --texto: #f1f5f9;
+    --texto-secundario: #94a3b8;
+    --borda: #475569;
+    --campo: #334155;
+}
+
+/* =================================
+   ESTILOS GERAIS
+================================= */
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cartões principais */
+
+.formulario,
+.lista {
+    background-color: var(--cartao);
+    color: var(--texto);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Títulos */
+
+.formulario h2,
+.lista h2 {
+    color: var(--texto);
+}
+
+/* Campos de texto */
+
+input,
+textarea {
+    background-color: var(--campo);
+    color: var(--texto);
+    border-color: var(--borda);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--texto-secundario);
+}
+
+/* =================================
+   CARTÕES DAS TAREFAS
+================================= */
+
+.tarefa {
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: var(--cartao);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.tarefa h3 {
+    color: var(--texto);
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.tarefa p {
+    color: var(--texto-secundario);
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.tarefa span {
+    display: block;
+    color: var(--texto-secundario);
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+/* =================================
+   BOTÕES DAS TAREFAS
+================================= */
+
+.tarefa button {
+    width: auto;
+    padding: 9px 14px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin: 4px 4px 4px 0;
+    transition: background-color 0.2s;
+}
+
+.botao-concluir {
+    background-color: #16a34a;
+}
+
+.botao-concluir:hover {
+    background-color: #15803d;
+}
+
+.botao-editar {
+    background-color: #2563eb;
+}
+
+.botao-editar:hover {
+    background-color: #1d4ed8;
+}
+
+.botao-excluir {
+    background-color: #dc2626;
+}
+
+.botao-excluir:hover {
+    background-color: #b91c1c;
+}
+
+/* =================================
+   AJUSTES DO MODO ESCURO
+================================= */
+
+/* Fundo da página */
+
+body.modo-escuro {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+/* Cartões principais */
+
+body.modo-escuro .formulario,
+body.modo-escuro .lista {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+/* Títulos */
+
+body.modo-escuro h2 {
+    color: #f1f5f9;
+}
+
+/* Campos */
+
+body.modo-escuro input,
+body.modo-escuro textarea {
+    background-color: #334155;
+    color: #f1f5f9;
+    border-color: #475569;
+}
+
+body.modo-escuro input::placeholder,
+body.modo-escuro textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* Cartões individuais */
+
+body.modo-escuro .tarefa {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.modo-escuro .tarefa h3 {
+    color: #f1f5f9;
+}
+
+body.modo-escuro .tarefa p,
+body.modo-escuro .tarefa span {
+    color: #cbd5e1;
+}
+
+/* Textos do cabeçalho e rodapé */
+
+body.modo-escuro .text-slate-500,
+body.modo-escuro .text-slate-400 {
+    color: #94a3b8;
+}
+
+/* Ícone do cabeçalho */
+
+body.modo-escuro .bg-blue-100 {
+    background-color: #1e3a8a;
+}
+
+body.modo-escuro .text-blue-600 {
+    color: #60a5fa;
+}
