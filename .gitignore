@@ -1,0 +1,9 @@
+
+# Dependências do Node.js
+**/node_modules/
+
+# Arquivos com variáveis de ambiente e chaves secretas
+**/.env
+
+# Arquivos de configuração da Vercel
+.vercel/
